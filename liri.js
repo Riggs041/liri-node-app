@@ -10,6 +10,7 @@ var Twitter = require('twitter');
 //Spotify NPM
 var Spotify = require('node-spotify-api');
 
+var request = require('request');
 //Keys
 var client = new Twitter(keys.twitterKeys);
 var spotify = new Spotify(keys.spotify);
@@ -26,7 +27,6 @@ var enter = "\n"
     This will show your last 20 tweets and when they were created at in your terminal/bash window.
 */
 if (command === "my-tweets") {
-
     var params = {
         screen_name: "coding_practice",
         count: 20,
@@ -57,7 +57,6 @@ if (command === "my-tweets") {
     If no song is provided then your program will default to "The Sign" by Ace of Base.
 */
 if (command === "spotify-this-song") {
-    var Spotify = require('node-spotify-api');
     spotify.search({
         type: 'track',
         query: searchTerm,
@@ -104,7 +103,7 @@ if (command === "movie-this") {
     if (!searchTerm) {
         searchTerm = "Mr. Nobody";
     }
-    var request = require('request');
+    
     request('http://www.omdbapi.com/?i=' + searchTerm + '&apikey=37d3b3d4', function (error, response, body) {
         var body = JSON.parse(body);
         var movies = ("Title: " + body.Title +
