@@ -16,5 +16,15 @@
   "bugs": {
     "url": "https://github.com/Riggs041/liri-node-app/issues"
   },
-  "homepage": "https://github.com/Riggs041/liri-node-app#readme"
+  "homepage": "https://github.com/Riggs041/liri-node-app#readme",
+  "dependencies": {
+    "dotenv": "^6.0.0",
+    "inquirer": "^6.0.0",
+    "install": "^0.12.1",
+    "node-spotify-api": "^1.0.7",
+    "npm": "^6.1.0",
+    "request": "^2.87.0",
+    "twitter": "^1.7.1"
+  },
+  "devDependencies": {}
 }
